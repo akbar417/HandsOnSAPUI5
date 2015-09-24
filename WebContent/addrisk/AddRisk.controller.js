@@ -18,9 +18,9 @@ sap.ui.define([
 		
 		var i18nModel = new sap.ui.model.resource.ResourceModel({ bundleUrl : "i18n/messageBundle.properties" }); 
 		this.getView().setModel(i18nModel, "i18n");
-		
-		var	oModel = new sap.ui.model.json.JSONModel("mockdata/products.json");
-	    oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
+	    var	oModel = new sap.ui.model.json.JSONModel({
+	    	ConstraintItems:[]
+	    });
 	    this.getView().setModel(oModel);
 	},
 
@@ -81,51 +81,20 @@ handleClose: function(oEvent) {
 //	}
         
         
-        onAddConstraintItem: function(oEvent){
-            
-            var addedItemRow = new sap.m.ColumnListItem();
-
-            var addedInputCellItem = new sap.m.Input ({
-        
-            showValueHelp:true,  
-            valueHelpRequest:[this. handleValueHelp,this]
-
-});
-  
-   
-
-     
-            
-           var addedComboCellItem = new sap.m.ComboBox({
-                                                  
-                      items: [  
-                                itm1 = new sap.ui.core.Item({text: "="}),   
-                        
-                                itm3 = new sap.ui.core.Item({text: ">="}),
-                                
-                                itm3 = new sap.ui.core.Item({text: "<="}),
-                                
-                                itm3 = new sap.ui.core.Item({text: "<"}),
-                                
-                                itm3 = new sap.ui.core.Item({text: ">"})
-                              ] 
-                                                         
-});
-
-
-           var addedCellItem = new sap.m.Input({
-       
-                  text: ""
-       
-});
-addedItemRow.addCell(addedInputCellItem).
-                    addCell(addedComboCellItem).
-                   addCell(addedCellItem);
-                   
-      this.getView().byId("idConstraintItemTable").addItem(addedItemRow);
+   onAddConstraintItem: function(){
+      var model = this.getView().getModel();
+      var constraintTableData = model.getData().ConstraintItems;
+      var tempData = {measurement:"", value:"", UOMeasurement:""};
+      constraintTableData.push(tempData);
+      model.refresh();
  },
+ onConstraintItemDelete: function(oEvent){
+	 var itemIndex = oEvent.getParameter("listItem").getBindingContext().getPath().split("/")[2];
+	 var model = this.getView().getModel();
+     var constraintTableData = model.getData().ConstraintItems;
+     constraintTableData.splice(itemIndex, 1);
+     model.refresh();
+ }
 
-
-
-	       })
+	       });
 });

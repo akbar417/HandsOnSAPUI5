@@ -5,7 +5,8 @@
 	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
 
 
-	<Table id="idConstraintItemTable" inset="true">
+	<Table id="idConstraintItemTable" inset="false" mode="Delete"
+		delete="onConstraintItemDelete" items="{/ConstraintItems}">
 
 		<headerToolbar>
 			<Toolbar>
@@ -18,35 +19,33 @@
 
 		<columns>
 			<Column>
-				<Text text="Measurement" vAlign="Middle" />
-				<template>
-					<Input showValueHelp="true" />
-				</template>
+				<Text text="Measurement" />
 			</Column>
 
 			<Column>
-				<Text text="Operator" vAlign="Middle" />
-				<template>
-					<Input showValueHelp="true" />
-				</template>
+				<Text text="Value" />
 			</Column>
 
 			<Column>
-				<Text text="Value" vAlign="Middle" />
-				<template>
-					<Input showValueHelp="true" />
-				</template>
-			</Column>
-
-			<Column>
-				<Text text="Unit Of Measurement" vAlign="Middle" />
-				<template>
-					<Input showValueHelp="true" />
-				</template>
+				<Text text="Unit Of Measurement" />
 			</Column>
 
 		</columns>
-
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Input showValueHelp="true" />
+					<ComboBox >
+						<core:Item key="=" text="=" />
+						<core:Item key=">=" text=">=" />
+						<core:Item key="&lt;=" text="&lt;=" />
+						<core:Item key="&lt;" text="&lt;" />
+						<core:Item key=">" text=">" />
+					</ComboBox>
+					<Input />
+				</cells>
+			</ColumnListItem>
+		</items>
 	</Table>
 </core:FragmentDefinition>
 
