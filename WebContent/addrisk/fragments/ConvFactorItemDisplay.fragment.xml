@@ -1,0 +1,38 @@
+
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:model="sap.ui.model">
+   <Table id="idConvFacGroupTable" inset="true" items="{/ConversationFactor}" >
+		<headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>Conversion Factors}" level="H1"/>
+			</Toolbar>
+		</headerToolbar>
+			<columns>
+				<Column>
+ 					<Text text="Effective From" />
+				</Column>
+				<Column>
+					<Text text="Effective To" />
+				</Column>
+				<Column>
+					<Text text="Factor Name" />
+				</Column>
+				<Column>
+					<Text text="Factor Value" />
+				</Column>
+				<Column>
+					<Text text="Unit Of Measurement" />
+				</Column>
+				</columns>                                                    
+		<items>
+			<ColumnListItem >
+				<cells>
+					<ObjectIdentifier text="{Effective_From}"  />
+					<Text text="{Effective_To}"/>
+					<Text text="{Factor_Name}"/>
+					<Text text="{Factor_Value}"/>
+					<Text text="{Unit_Of_Measurement}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+ 	</Table>
+</core:FragmentDefinition>

@@ -1,0 +1,159 @@
+{
+	"ProductCollection": [
+		{
+			
+			"Name": "FHD NGL",
+		    
+		    "Description": "A very powerful projector with special features for Internet usability, USB",
+
+			"Type": "Well Completion",
+			
+			"Potential_Count": "730",
+			
+			"Capacity_Count": "730",
+			
+			"Risk_Count": "4",
+			
+			"Opportunity_Count": "4",
+			
+			"Event_Count": "4"
+		
+	 	},
+	 	
+	 	{
+			
+			"Name": "FHD NGL",
+		    
+		    "Description": "A very powerful projector with special features for Internet usability, USB",
+
+			"Type": "Well Completion",
+			
+			"Potential_Count": "730",
+			
+			"Capacity_Count": "730",
+			
+			"Risk_Count": "4",
+			
+			"Opportunity_Count": "4",
+			
+			"Event_Count": "4"
+		
+	 	},
+	 	
+	 	{
+			
+			"Name": "FHD NGL",
+		    
+		    "Description": "A very powerful projector with special features for Internet usability, USB",
+
+			"Type": "Well Completion",
+			
+			"Potential_Count": "730",
+			
+			"Capacity_Count": "730",
+			
+			"Risk_Count": "4",
+			
+			"Opportunity_Count": "4",
+			
+			"Event_Count": "4"
+		
+	 	},
+	 	
+	 	{
+			
+			"Name": "FHD NGL",
+		    
+		    "Description": "A very powerful projector with special features for Internet usability, USB",
+
+			"Type": "Well Completion",
+			
+			"Potential_Count": "730",
+			
+			"Capacity_Count": "730",
+			
+			"Risk_Count": "4",
+			
+			"Opportunity_Count": "4",
+			
+			"Event_Count": "4"
+		
+	 	}
+	 	
+],
+
+"ConversationFactor": [
+		{
+			
+			"Effective_From": "8/06/2015",
+		    
+		    "Effective_To": "8/06/2015",
+
+			"Factor_Name": "Well Completion",
+			
+			"Factor_Value": "730",
+			
+			"Unit_Of_Measurement": "730"
+			
+			
+		
+	 	}
+	 	],
+	 	
+"MediumDisplay": [
+		{
+			
+			"Medium": "Oil",
+		    
+		    "Base": "Volume",
+
+			"Unit of Measurement": "BBL",
+			
+			"Precision": "1"
+	
+	 	}
+	 	],
+	 	
+"Equations": [
+		{
+			
+			"Effective From": "Sep 01, 2014",
+		    
+		    "Effective To": "Sep 01, 2015",
+
+			"Measurement": "Gas_Volume",
+			
+			"Equation": "Oil_Volume*GOR"
+	
+	 	}
+	 	],
+	 	
+"Hierarchy": [
+		{
+			
+			"Name": "Scenario - STPF Production Plan",
+		    
+		    "Value": "PDO"
+		}
+	 	],
+	 	
+"Header": [
+		{
+			
+			"Type": "Well Completion",
+			
+			"Profit Center": "PFC 2.1",
+			
+			"Cost Center": "CC 1.1",
+			
+			"WBS": "ABC 1",
+		    
+		    "Description": "Fahud Oil Network",
+		    
+		    "Effective From": "Sep 01, 2015",
+		    
+		    "Effective To": "Sep 01, 2016"
+		   
+		}
+	 	]
+}

@@ -1,0 +1,17 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="addrisk.AddRisk" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>New Risk}" showNavButton="true">
+		<content>
+			<core:Fragment id="xmlInXml" fragmentName="addrisk.fragments.RiskOppHeader" type="XML" />	
+			<core:Fragment id="xmlInXml1" fragmentName="addrisk.fragments.ConstraintItem" type="XML" />
+			<core:Fragment id="xmlInXml2" fragmentName="addrisk.fragments.EquationItem" type="XML" />
+			<core:Fragment id="xmlInXml3" fragmentName="addrisk.fragments.ConvFactorItemDisplay" type="XML" />
+		</content>
+		<footer>
+			<OverflowToolbar>
+	   			<ToolbarSpacer/>
+		        <Button id="submit" text="Submit Data" />        
+			</OverflowToolbar>
+    	</footer>
+	</Page>
+</core:View>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+
+
+	<Table id="idConstraintItemTable" inset="true">
+
+		<headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>Constraints}" level="H2" />
+				<!-- <Button icon="sap-icon://sys-help" press= "onConversionHelp" /> -->
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button icon="sap-icon://add" press="onAddConstraintItem" />
+			</Toolbar>
+		</headerToolbar>
+
+		<columns>
+			<Column>
+				<Text text="Measurement" vAlign="Middle" />
+				<template>
+					<Input showValueHelp="true" />
+				</template>
+			</Column>
+
+			<Column>
+				<Text text="Operator" vAlign="Middle" />
+				<template>
+					<Input showValueHelp="true" />
+				</template>
+			</Column>
+
+			<Column>
+				<Text text="Value" vAlign="Middle" />
+				<template>
+					<Input showValueHelp="true" />
+				</template>
+			</Column>
+
+			<Column>
+				<Text text="Unit Of Measurement" vAlign="Middle" />
+				<template>
+					<Input showValueHelp="true" />
+				</template>
+			</Column>
+
+		</columns>
+
+	</Table>
+</core:FragmentDefinition>
+
